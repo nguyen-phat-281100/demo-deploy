@@ -1,0 +1,89 @@
+.detail__container{
+    padding: 60px 20%;
+    @include mediaQueryMax('large'){
+        padding: 60px 5px;
+    }
+    .movie__detail-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        & .movie__detail-details{
+            display: flex;
+            & .movide__detail-image{
+                width: 200px;
+                height: 250px;
+                background-position: center;
+                background-size: cover;
+                border-radius: 4px;
+                @include mediaQueryMax('small'){
+                    height: 200px;
+                }
+            }
+            & .movie__detail-info{
+                margin: auto 20px;
+                text-align: left;
+                font-weight: bold;
+                color: #d03940;
+                & p:nth-child(2){
+                    text-transform: uppercase;
+                    font-size: 1.4rem;
+                }
+                & .btn-booking{
+                    background-color: #faae2b;
+                    padding: 10px 20px;
+                    font-weight: bold;
+                    color: #00473e;
+                    transition: .3s all;
+                    border-radius: 4px;
+                    &:hover{
+                        background-color: #f8a20e;
+                        
+                    }
+                }
+
+                & p:nth-child(3){
+                    height: 4rem;
+                    overflow: scroll;
+                    width: 100px;
+                }
+            }
+        }
+    }
+    .movie__calendar{
+        margin-top: 20px;
+        
+        &.ant-tabs > .ant-tabs-nav{
+            background-color: rgba(0,0,0,0.2) !important;
+            color: blue;
+        }
+        .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn,
+        .ant-tabs-tab .ant-tabs-tab-btn
+        {
+            color: #e9221f !important;
+        }
+        .ant-tabs-ink-bar {
+            position: absolute;
+            background: #ff6e6c;
+            pointer-events: none;
+        }
+        // .ant-tabs-tabpane .ant-tabs-tabpane-active{
+        //     display: ;
+        // }
+        button{
+            color: #d03940;
+            border: 1px solid #d03940;
+            margin: auto auto;
+            height: 100%;
+            line-height: 100%;
+            text-align: end;
+            padding: 10px 20px;
+            border-radius: 4px;
+            transition: .3s all;
+            &:hover{
+                background-color: #d03940;
+                color: white;
+            }
+        }
+    }
+}
+

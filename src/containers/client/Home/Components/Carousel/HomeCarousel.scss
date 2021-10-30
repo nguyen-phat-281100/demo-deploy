@@ -1,0 +1,34 @@
+.carousel__container{
+    position: relative;
+    width: 100%;
+    height: 85vh;
+    @include mediaQueryMax('medium'){
+        height: 40vh;
+    }
+    .carousel__item{
+        height: 100%;
+        color: #fff;
+        list-style: 160px;
+        text-align: center;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+    }
+    .overplay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        transition: all .5s;
+        background: linear-gradient(to top, $color-black-0, transparent 90%);
+        // &:hover{
+        //     background: linear-gradient(to top, $color-black-0, transparent 100%);
+        // }
+    }
+    @include mediaQueryMax("small") {
+        height: 30vh !important;
+    }
+}
